@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>My first Bootstrap website</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #665743;
+            color: #F6F7BE;
+        }
+
+        .navbar {
+            margin-bottom: 0;
+            border-radius: 0;
+            background: #665743;
+            color: #F6F7BE;
+            padding: 10px 0;
+            font-size: 1.2em;
+            border: 0;
+        }
+
+        .navbar-brand {
+            float: left;
+            padding: 0 15px;
+        }
+
+        .navbar-brand img {
+            height: 50px;
+        }
+
+        #myNav a {
+            color: #F6F7BE;
+            background-color: transparent;
+            transition: 0.5s;
+        }
+
+        #myNav .nav .active a, #myNav .active a:focus, #myNav .active a:hover {
+            color: #BF4E28;
+            background: #F6F7BE;
+            box-shadow: none;
+            text-shadow: none;
+        }
+
+        #myNav a:focus, #myNav a:hover {
+            color: #F6F7BE;
+            background-color: #BF4E28;
+            text-shadow: none;
+        }
+
+        #hamburger, #hamburger:focus, #hamburger:hover {
+            border: none;
+            background: transparent;
+        }
+
+        .navbar .navbar-header .navbar-toggle span.icon-bar {
+            color: #BF4E28;
+            background-color: #F6F7BE;
+        }
+
+        a.left.carousel-control, a.right.carousel-control {
+            background: none;
+        }
+
+        .carousel .carousel-inner img {
+        }
+
+        .carousel-caption {
+            top: 50%;
+            transform: translateY(-50%);
+            text-transform: uppercase;
+            background: rgba(34, 34, 40, 0.4);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            padding: 0;
+        }
+
+        .carousel-caption h1 {
+            margin: 1em
+            color: #F6F7BE;
+            font-size: 4vw;
+        }
+
+        .carousel-caption .btn {
+            background: #E5AC27;
+            color: #665743;
+            box-shadow: none;
+            margin: 10px;
+            border: 1px solid #665743;
+            min-height: 6vw;
+            font-size: 2vw
+        }
+
+        .container h2, .container h3 {
+            margin: 1em;
+        }
+
+        #icon1, #icon2, #icon3{
+            background-size: cover;
+            border: 2px solid #F6F7BE;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+
+            transition: 0.5s;
+        }
+
+        #icon1:hover, #icon2:hover, #icon3:hover{
+            border: 2px solid #BF4E28;
+            box-shadow: 0 0 10px black;
+        }
+
+        #icon1 {
+            background-image: url('https://media1.popsugar-assets.com/files/thumbor/YwbhYux04vhjVHMFEU3mULuCnkE/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2017/09/29/116/n/40952353/a7b9d2da59cef7ae999a05.43984028_edit_img_cover_file_16635622_1506735620/i/Cheap-Christmas-Kids-Gifts.jpg');
+        }
+
+        #icon2 {
+            background-image: url('https://www.cheapflights.co.nz/news/wp-content/uploads/2014/12/125-christmas-dishes-from-around-the-world-02-620x414.jpg');
+        }
+
+        #icon3 {
+            background-image: url('https://media2.s-nbcnews.com/j/newscms/2015_49/879766/christmas-tree-today-tease-1-151201_dd6ec0167e769c87de32fd740c83f70a.today-inline-large.jpg');
+        }
+
+        .container .row{
+            margin: 2em auto;
+        }
+
+        .container .row .col-sm-8 p{
+            margin: 2em 0;
+        }
+
+        .container .row .footer h6{
+            margin: 3em;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<!--NAVBAR-->
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" id="hamburger" data-toggle="collapse"
+                    data-target="#myNav" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img
+                    src="https://www.shareicon.net/data/256x256/2015/08/24/90278_ball_512x512.png" alt=""></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNav">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">O mnie</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<!--CAROUSEL-->
+
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+    <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    </ol>
+
+    <div class="carousel-inner" role="listbox">
+        <div class="carousel-caption">
+            <h1>złóż znajomym świąteczne życzenia</h1>
+            <button type="button" class="btn btn-default">WYŚLIJ</button>
+        </div>
+        <div class="item active">
+            <img src="https://pixabay.com/get/eb32b90a2df5033ed1534705fb0938c9bd22ffd41cb0134894f7c37fa0/anise-2785512_1920.jpg.jpg"
+                 alt="christmas">
+        </div>
+        <div class="item">
+            <img src="https://pixabay.com/get/eb30b50d21f1033ed1534705fb0938c9bd22ffd41cb0134894f7c37aa0/honey-2542952_1920.jpg"
+                 alt="christmas">
+        </div>
+        <div class="item">
+            <img src="https://pixabay.com/get/eb3cb0072df3043ed1534705fb0938c9bd22ffd41cb0134894f7c27ba5/christmas-2918575_1920.jpg"
+                 alt="christmas">
+        </div>
+    </div>
+
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<div class="container text-center">
+    <h2>Zamów u Nas</h2>
+    <div class="row">
+        <div class="col-sm-4">
+            <div id="icon1"></div>
+            <h3>Prezenty</h3>
+            <p>Kupimy i zapakujemy prezenty pod Twoją choinkę zgodnie ze szczegółowymi wytycznymi.</p>
+        </div>
+        <div class="col-sm-4">
+            <div id="icon2"></div>
+            <h3>Specjały</h3>
+            <p>Tradycyjna polska wigilia czy owoce morza? Przygotujemy każdy specjał o jakim marzysz na wigilijnym stole.</p>
+        </div>
+        <div class="col-sm-4">
+            <div id="icon3"></div>
+            <h3>Choinkę</h3>
+            <p>Jodła, świerk lub sztuczna z olejkami eterycznymi. Ustawimy i przystroimy choinkę u Ciebie w domu.</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12 col-md-4 text-left">
+            <h3>Tradycyjne potrawy i dania wigilijne</h3>
+            <p> Znane z dzieciństwa, ze świątecznych stołów naszych mam i babć. Postne potrawy, których zgodnie z tradycją powinno być dokładnie dwanaście.</p>
+
+               <p> Barszcz wigilijny, czerwony lub grzybowy. Uszka i pierogi wigilijne z kapustą i grzybami, świąteczna kapusta z grzybami, śledzie, karp smażony i w galarecie. Kutia, łazanki z kapustą i grzybami oraz inne pyszne, sprawdzone i wielokrotnie powtarzane przepisy na dania wigilijne.</p>
+        </div>
+        <div class="col-sm-12 col-md-8">
+            <img src="http://restauracja-galicyjska.pl/wp-content/gallery/wigilie-firmowe/wigilia_firmowa_vip_13.jpg" class="img-responsive" alt="">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-12 text-center footer">
+            <h6>&copy; Paweł Lorencowicz 2017</h6>
+        </div>
+    </div>
+
+
+
+
+</div>
+
+
+</body>
+</html>
